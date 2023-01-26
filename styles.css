@@ -1,0 +1,33 @@
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    border: 1px solid black;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-rows: auto;
+    width: 550px;
+    height: 550px;
+    border: 1px solid blue;
+    justify-content: center;
+}
+
+.box {
+    border: 1px solid black;
+    background: red;
+}
