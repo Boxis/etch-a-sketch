@@ -19,15 +19,17 @@ h1 {
 
 .container {
     display: grid;
-    /* grid-template-columns: repeat(4, 1fr); */
     grid-template-rows: auto;
     width: 550px;
     height: 550px;
-    border: 1px solid blue;
+    border: 1px solid black;
     justify-content: center;
 }
 
 .box {
     border: 1px solid black;
-    background: red;
+}
+
+.box-hover {
+    background-color: black;
 }
