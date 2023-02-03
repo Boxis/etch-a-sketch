@@ -11,20 +11,46 @@ function createGrid(numBox) {
     }
 }
 
+// Default grid is size 16
 createGrid(16);
 
 
-// Create object of boxes
-var elements = document.getElementsByClassName('box');
-var i;
+// Resize grid function, used for button
+function resizeGrid() {
 
-// console.log(elements);
+    mydiv = document.getElementById('grid-container');
+    while (mydiv.firstChild) {
+        mydiv.removeChild(mydiv.firstChild);
+    }
 
-// Loop through every box and change color
-for (i = 0; i < elements.length; ++i) {
- elements[i].addEventListener('mouseover', changeColor)  
+    let grid = prompt("Please enter the size for the sketching grid", "4");
+    if (grid != null) {
+        createGrid(grid);
+    }
+
+    gridColor();
+
 }
 
+
+// Changes grid cover by hovering over box
+function gridColor() {
+    // Create object of boxes
+    var elements = document.getElementsByClassName('box');
+    var i;
+
+    // Loop through every box and change color
+    for (i = 0; i < elements.length; ++i) {
+        elements[i].addEventListener('mouseover', changeColor)  
+    }
+}
+
+
+// Color change to black
 function changeColor() {
     this.style.backgroundColor = "black";
 }
+
+
+// Activates the grid color hovering function at start
+gridColor();
