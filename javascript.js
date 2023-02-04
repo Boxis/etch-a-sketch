@@ -23,8 +23,8 @@ function resizeGrid() {
         mydiv.removeChild(mydiv.firstChild);
     }
 
-    let grid = prompt("Please enter the size for the sketching grid", "4");
-    if (grid != null) {
+    let grid = prompt("Please enter the size for the sketching grid (limit 100)", "4");
+    if (grid != null && grid <= 100) {
         createGrid(grid);
     }
 
